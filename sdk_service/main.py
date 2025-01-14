@@ -5,8 +5,14 @@ from hunter_sdk.service import HunterService
 # Load environment variables from .env file
 load_dotenv()
 
-API_KEY = os.getenv("HUNTER_API_KEY")
-EMAIL_ADDRESS = os.getenv("EMAIL_ADDRESS")
+# Get API_KEY and EMAIL_ADDRESS from environment variables. If not found, use default values.
+# Replace the default values with your own API_KEY and EMAIL_ADDRESS
+API_KEY = os.getenv("HUNTER_API_KEY") or "a21b21087da4a074eb5f5e958d824dab9bb62fe6"
+EMAIL_ADDRESS = os.getenv("EMAIL_ADDRESS") or "dennisclay0304@gmail.com"
+
+# Check if API_KEY and EMAIL_ADDRESS are set
+if API_KEY is None or EMAIL_ADDRESS is None:
+    raise ValueError("API_KEY and EMAIL_ADDRESS environment variables must be set.")
 
 
 def main() -> None:
