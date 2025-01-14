@@ -2,3 +2,4 @@ mypy
 wemake-python-styleguide
 requests
 types-requests
+python-dotenv
