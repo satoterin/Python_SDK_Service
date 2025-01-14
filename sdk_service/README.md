@@ -14,6 +14,10 @@ sdk_service/ ├── hunter_sdk/ │ ├── init.py │ ├── client.py
 
 2. Install `requirements`:
     ```sh
+    pip install -r requirements.txt
+    ```
+    or manually
+    ```sh
     pip install mypy wemake-python-styleguide requests types-requests
     ```
 
